@@ -1,0 +1,63 @@
+html {
+    background-color: black;
+}
+.title {
+    position: absolute;
+    left: 35%;
+    font-family: "Brush Script MT";
+    font-size: 300%;
+    color: white;
+}
+.intro {
+    position: absolute;
+    top: 7%;
+    left: 20%;
+    font-family: "Brush Script MT";
+    font-size: 300%;
+    color: white;
+}
+.Ninja {
+    position: absolute;
+    top: 50%;
+}
+.Alien {
+    position: absolute;
+    width: 18%;
+    top: 50%;
+    left: 78%;
+}
+
+.ab1 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
+}
+.ab2 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    border-radius: 50%;
+}
+.ab3 {
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    border-radius: 50%;
+}
+
+.ab1:hover{
+    border:solid thick yellow;
+    border-width: 10px;
+    background-color: turquoise;
+}
+.ab2:hover{
+    border:solid thick yellow;
+    border-width: 10px;
+    background-color: turquoise;
+}
+.ab3:hover{
+    border:solid thick yellow;
+    border-width: 10px;
+    background-color: turquoise;
+}
