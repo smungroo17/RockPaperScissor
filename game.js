@@ -14,6 +14,7 @@ function computerPlay(){
 }
 
 function singleRound(playerSelection, computerSelection){
+    console.log("Worked!!!!");
     if(playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "rock"){
         return("Draw");
     }
@@ -59,5 +60,11 @@ function game(){
     }
     else{
         console.log("Draw.");
+    }
+}
+
+function test(n){
+    for(i = 0; i < n; i++){
+        console.log("Worked!");
     }
 }
