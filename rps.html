@@ -40,7 +40,8 @@
     <p id="won" class="win">You saved the Earth!</p>
     <p id="lost" class="loose">Aliens took control of the Earth!</p>
     <p id="draw" class="draw">It is a draw!</p>
-    <button id="replay" class="rep">Replay</button>
+    <button class="button1" id="Replay">Replay</button>
+
 </body>
 <script>
   var alienScore = 0;
@@ -112,6 +113,11 @@
       turns += 1;
     }
     
+    function disableButtons(){
+      document.getElementById("rock").disabled = true;
+      document.getElementById("paper").disabled = true;
+      document.getElementById("scissors").disabled = true;
+    }
     if(turns == 5){
       setTimeout(function(){
         if(alienScore > NinjaScore){
@@ -124,6 +130,27 @@
           document.getElementById("draw").style.display = "block";
         }
       }, 2000)
+      setTimeout(function(){
+        document.getElementById("Replay").style.display = "block";
+      }, 2000)
+      disableButtons();
+      document.getElementById("Replay").addEventListener("click", function(){
+        document.getElementById("rock").disabled = false;
+        document.getElementById("paper").disabled = false;
+        document.getElementById("scissors").disabled = false;
+
+        document.getElementById("lost").style.display = "none";
+        document.getElementById("won").style.display = "none";
+        document.getElementById("draw").style.display = "none";
+
+        alienScore = 0;
+        turns = 0;
+        NinjaScore = 0;
+
+        document.getElementById("Replay").style.display = "none";
+        document.getElementById("AScore").innerHTML = ""+0;
+        document.getElementById("NScore").innerHTML = ""+0;
+      })
     }
   }
 </script>
