@@ -76,3 +76,76 @@ html {
     border-width: 10px;
     background-color: black
 }
+.toShowN{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    width: 20%;
+    height: auto;
+}
+.toShowA{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 20%;
+    height: auto;
+}
+.roundMessage{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    font-family: "Brush Script MT";
+    font-size: 300%;
+    color: white;
+    display: none;
+}
+.nsc{
+    position: absolute;
+    top: 25%;
+    left: 13%;
+    font-family: "Brush Script MT";
+    font-size: 300%;
+    color: white;
+}
+.asc{
+    position: absolute;
+    top: 25%;
+    left: 88%;
+    font-family: "Brush Script MT";
+    font-size: 300%;
+    color: white;
+}
+.win{
+    position: absolute;
+    top: 45%;
+    left: 38%;
+    font-family: "Brush Script MT";
+    font-size: 300%;
+    color: white;
+    display: none;
+}
+.loose{
+    position: absolute;
+    top: 45%;
+    left: 34%;
+    font-family: "Brush Script MT";
+    font-size: 300%;
+    color: white;
+    display: none;
+}
+.draw{
+    position: absolute;
+    top: 45%;
+    left: 42%;
+    font-family: "Brush Script MT";
+    font-size: 300%;
+    color: white;
+    display: none;
+}
+.rep{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+
+
+}

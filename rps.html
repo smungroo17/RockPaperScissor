@@ -24,18 +24,107 @@
         <img src="images/scissors.png", alt="Scissor" height="130">
       </button>
     </div>
+    <div>
+      <img src="images/rock.png", alt="Rock" height="130" class="toShowN" style="display:none;" id="nr">
+      <img src="images/paper.png", alt="Paper" height="130" class="toShowN" style="display:none;" id="np">
+      <img src="images/scissors.png", alt="Scissor" height="130" class="toShowN" style="display:none;" id="ns">
+    </div>
+    <div>
+      <img src="images/rock.png", alt="Rock" height="130" class="toShowA" style="display:none;" id="ar">
+      <img src="images/paper.png", alt="Paper" height="130" class="toShowA" style="display:none;" id="ap">
+      <img src="images/scissors.png", alt="Scissor" height="130" class="toShowA" style="display:none;" id="as">
+    </div>
+    <p class="roundMessage" id="message">Display Message</p>
+    <p id ="NScore" class="nsc">0</p>
+    <p id="AScore" class="asc">0</p>
+    <p id="won" class="win">You saved the Earth!</p>
+    <p id="lost" class="loose">Aliens took control of the Earth!</p>
+    <p id="draw" class="draw">It is a draw!</p>
+    <button id="replay" class="rep">Replay</button>
 </body>
 <script>
+  var alienScore = 0;
+  var NinjaScore = 0;
+  var turns = 0;
   function reply_click(clicked_id){
     var computerSelection = computerPlay();
+    switch(computerSelection){
+      case "Rock":
+        document.getElementById("ar").style.display = "block";
+        setTimeout(function(){document.getElementById("ar").style.display = "none";}, 2000);
+        break;
+      case "Paper":
+        document.getElementById("ap").style.display = "block";
+        setTimeout(function(){document.getElementById("ap").style.display = "none";}, 2000);
+        break;
+      case "Scissor":
+        document.getElementById("as").style.display = "block";
+        setTimeout(function(){document.getElementById("as").style.display = "none";}, 2000);
+        break;
+    }
+
+    switch(clicked_id){
+      case "rock":
+        document.getElementById("nr").style.display = "block";
+        setTimeout(function(){document.getElementById("nr").style.display = "none";}, 2000);
+        break;
+      case "paper":
+        document.getElementById("np").style.display = "block";
+        setTimeout(function(){document.getElementById("np").style.display = "none";}, 2000);
+        break;
+      case "scissors":
+        document.getElementById("ns").style.display = "block";
+        setTimeout(function(){document.getElementById("ns").style.display = "none";}, 2000);
+        break;
+    }
+  
     var result = singleRound(clicked_id, computerSelection);
+    console.log("player: " + clicked_id + " computer: " + computerSelection);
+    console.log(result);
+    var element = document.getElementById("message");
+
     if(result == 0){
+      element.innerHTML = "Draw!";
+      element.style.display = "block";
+      setTimeout(function(){
+        element.style.display = "none";
+      }, 2000);
+      turns += 1;
     }
     else if(result == 1){
+      element.innerHTML = "You won!";
+      element.style.display = "block";
+      setTimeout(function(){
+        element.style.display = "none";
+      }, 2000)
+      NinjaScore += 1;
+      document.getElementById("NScore").innerHTML = ""+NinjaScore;
+      turns += 1;
     }
     else{
+      element.innerHTML = "You lost!";
+      element.style.display = "block";
+      setTimeout(function(){
+        element.style.display = "none";
+      }, 2000)
+      alienScore += 1;
+      document.getElementById("AScore").innerHTML = ""+alienScore;
+      turns += 1;
+    }
+    
+    if(turns == 5){
+      setTimeout(function(){
+        if(alienScore > NinjaScore){
+          document.getElementById("lost").style.display = "block";
+        }
+        else if(alienScore < NinjaScore){
+          document.getElementById("won").style.display = "block";
+        }
+        else{
+          document.getElementById("draw").style.display = "block";
+        }
+      }, 2000)
     }
   }
-
 </script>
 </html>
