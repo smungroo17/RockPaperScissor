@@ -14,27 +14,26 @@ function computerPlay(){
 }
 
 function singleRound(playerSelection, computerSelection){
-    console.log("Worked!!!!");
     if(playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "rock"){
-        return("Draw");
+        return 0;
     }
     else if(playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "paper"){
-        return("Draw");
+        return 0;
     }
     else if(playerSelection.toLowerCase() == "scissor" && computerSelection.toLowerCase() == "scissor"){
-        return("Draw");
+        return 0;
     }
     else if(playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissor"){
-        return("You win! " + playerSelection.toLowerCase() + " beats " + computerSelection.toLowerCase());
+        return 1;
     }
     else if(playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock"){
-        return("You win! " + playerSelection.toLowerCase() + " beats " + computerSelection.toLowerCase());
+        return 1;
     }
     else if(playerSelection.toLowerCase() == "scissor" && computerSelection.toLowerCase() == "paper"){
-        return("You win! " + playerSelection.toLowerCase() + " beats " + computerSelection.toLowerCase());
+        return 1;
     }
     else{
-        return("You loose! " + computerSelection.toLowerCase() + " beats " + playerSelection.toLowerCase());
+        return -1;
     }
 }
 

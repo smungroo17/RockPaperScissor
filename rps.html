@@ -14,21 +14,28 @@
       <img src="images/NicePng_green-bay-packers-logo_403843.png", alt="Image of an Alien" class="Alien">
     </div>
     <div>
-      <button class="ab1" id="b1">
+      <button class="ab1" id="rock" onClick="reply_click(this.id)">
         <img src="images/rock.png", alt="Rock" height="130">
       </button>
-      <button class="ab2" id="b2">
+      <button class="ab2" id="paper" onClick="reply_click(this.id)">
         <img src="images/paper.png", alt="Paper" height="130">
       </button >
-      <button class="ab3" id="b3">
+      <button class="ab3" id="scissors" onClick="reply_click(this.id)">
         <img src="images/scissors.png", alt="Scissor" height="130">
       </button>
     </div>
 </body>
 <script>
-  function clicked(){
-    test(5);
+  function reply_click(clicked_id){
+    var computerSelection = computerPlay();
+    var result = singleRound(clicked_id, computerSelection);
+    if(result == 0){
+    }
+    else if(result == 1){
+    }
+    else{
+    }
   }
-  document.getElementById("b1").addEventListener("click", clicked);
+
 </script>
 </html>
