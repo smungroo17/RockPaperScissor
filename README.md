@@ -1,1 +1,4 @@
-Simple JavaScript program to play rock paper scissor
+*Rock Paper Scissor Game
+*UI using HTML and CSS
+*Logic implemented in Javascript
+*DOM manipulation
