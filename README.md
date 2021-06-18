@@ -1,4 +1,6 @@
-*Rock Paper Scissor Game
-*UI using HTML and CSS
-*Logic implemented in Javascript
-*DOM manipulation
+Easy Rock Paper Scissor Game
+
+Goals:
+  - Practise HTML, CSS and Javascript
+  - Have fun!
+
